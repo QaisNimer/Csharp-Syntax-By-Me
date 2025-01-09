@@ -1,0 +1,217 @@
+Write a C# Sharp program to accept two integers and check whether they are equal or not.
+
+Write a C# Sharp program to check whether a given number is even or odd.
+
+Write a C# Sharp program to find out whether a given year is a leap year or not.
+
+Write a C# Sharp program to read the age of a candidate and determine whether it is eligible for casting his/her own vote.
+
+Write a C# Sharp program to find the largest of three numbers.
+
+Write a C# Sharp program to determine the eligibility for admission to a professional course based on the following criteria:
+
+    Marks in Maths >=65
+    Marks in Physics >=55
+    Marks in Chemistry >=50
+    Total in all three subjects >=180
+    or Total in Math and Subjects >=140
+
+Write a C# Sharp program to read temperature in centigrade and display a suitable message according to the temperature state below:
+
+    Temp < 0: Freezing weather
+    Temp 0-10: Very Cold weather
+    Temp 10-20: Cold weather
+    Temp 20-30: Normal in Temp
+    Temp 30-40: It's Hot
+    Temp >=40: It's Very Hot
+
+Write a C# Sharp program to read any day number as an integer and display the name of the day as a word.
+Test Data:
+4
+Expected Output:
+Thursday
+
+Write C# Sharp program to read any Month Number in integer and display Month name.
+Test Data:
+4
+Expected Output:
+April
+
+What is the output for this code?
+
+What is the output of the following code?
+
+What is the output of the following code?
+
+Write a C# Sharp program that takes three letters and displays them in reverse order.
+Test Data:
+Enter letter: b
+Enter letter: a
+Enter letter: t
+Expected Output:
+t a b
+
+Write a C# Sharp program that takes two numbers as input and performs an operation (+, -, *, x, /) on them and displays the result of that operation.
+Test Data:
+Input first number: 20
+Input operation: -
+Input second number: 12
+Expected Output:
+20 - 12 = 8
+
+Write a C# Sharp program to display certain values of the function x=y2+2y+1x=y2+2y+1 (using integer numbers for y, ranging from -5 to +5).
+
+Write a C# Sharp program to swap two numbers.
+Test Data:
+Input the First Number: 5
+Input the Second Number: 6
+Expected Output:
+After Swapping:
+First Number: 6
+Second Number: 5
+
+Write a C# Sharp program to print the output of the multiplication of three numbers entered by the user.
+Test Data:
+Input the first number to multiply: 2
+Input the second number to multiply: 3
+Input the third number to multiply: 6
+Expected Output:
+2 x 3 x 6 = 36
+
+Write a C# Sharp program to print on screen the output of adding, subtracting, multiplying, and dividing two numbers entered by the user.
+Test Data:
+Input the first number: 25
+Input the second number: 4
+Expected Output:
+25 + 4 = 29
+25 - 4 = 21
+25 x 4 = 100
+25 / 4 = 6
+25 mod 4 = 1
+
+Write a C# Sharp program that prints the multiplication table of a number as input.
+Test Data:
+Enter the number: 5
+Expected Output:
+5 * 0 = 0
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+....
+5 * 10 = 50
+
+Write a C# Sharp program that takes four numbers as input to calculate and print the average.
+Test Data:
+Enter the First number: 10
+Enter the Second number: 15
+Enter the third number: 20
+Enter the fourth number: 30
+Expected Output:
+The average of 10, 15, 20, 30 is: 18
+
+Write a C# Sharp program that takes three numbers (x, y, z) as input and outputs (x+y).z and x.y + y.z.
+Test Data:
+Enter first number - 5
+Enter second number - 6
+Enter third number - 7
+Expected Output:
+Result of specified numbers 5, 6, and 7, (x+y).z is 77 and x.y + y.z is 72
+
+Write a C# Sharp program that takes an age (for example 20) as input and prints something like "You look older than 20".
+Test Data:
+Enter your age - 25
+Expected Output:
+You look older than 25
+
+Write a C# program to convert Celsius degrees to Kelvin and Fahrenheit.
+Test Data:
+Enter the amount of Celsius: 30
+Expected Output:
+Kelvin = 303
+Fahrenheit = 86
+
+Write a C# program that removes a specified character from a non-empty string using the index of a character.
+Test Data:
+w3resource
+Sample Output:
+wresource
+w3resourc
+3resource
+
+Write a C# program to compute the sum of two given integers. If two values are the same, return the triple of their sum.
+
+Write a C# program to get the absolute value of the difference between two given numbers. Return double the absolute value of the difference if the first number is greater than the second number.
+
+Write a C# program to check the sum of the two given integers. Return true if one of the integers is 20 or if their sum is 20.
+
+Write a C# program to check if the given integer is within 20 of 100 or 200.
+Sample Output:
+Input an integer:
+25
+False
+
+Write a C# program to find the GCD (Greatest Common Divisor) of two numbers.
+
+Write a C# program to calculate the power of a number.
+
+Write a C# program to find the ASCII value of a character.
+
+Write a C# program to check if a given year is a leap year.
+
+Write a C# program to find the sum of digits of a given number.
+
+Write a C# program to check if a given number is a perfect number.
+
+Write a C# program to find the area of a triangle given its three sides.
+
+Write a C# program that generates a random integer between 1 and 20 and then prints whether it is an even number, odd number, or a multiple of 5.
+
+Write a C# program that generates a random integer between 1 and 100 and then checks if it is a perfect square.
+
+Write a C# program that generates a random integer between 1 and 100 and then checks if it is a multiple of 7. If it is, print "Multiple of 7", otherwise print "Not a multiple of 7".
+
+Write a C# program that generates a random integer between 1 and 100 and then checks if it is a prime number.
+
+Write a C# program that generates a random integer between 1 and 100 and then checks if it is divisible by both 3 and 5. If it is, print "Divisible by both 3 and 5", otherwise print "Not divisible by both 3 and 5".
+
+Write a C# program that generates a random integer between 1 and 10 and then checks if it is greater than 5. If it is, print "Greater than 5", otherwise print "Less than or equal to 5".
+
+Write a C# program that generates two random numbers between 1 and 6 (representing dice rolls) and prints their sum.
+
+Write a C# program that generates a random integer between 1 and 12 and then prints the corresponding month name.
+
+Write a C# program that simulates a coin toss. If the result is heads, print "Heads", otherwise print "Tails".
+
+Write a C# program that generates a random number between 1 and 100 and then checks if it is even or odd.
+
+Write a C# program to check if a number is even or odd.
+
+Write a C# program to generate multiplication table of a given number.
+
+Write a C# program to calculate the power of a number.
+
+Write a C# program to find the GCD (Greatest Common Divisor) of two numbers.
+
+Write a C# program to find the LCM (Least Common Multiple) of two numbers.
+
+Write a C# program to calculate the sum of natural numbers up to a given number.
+
+Write a C# program to find all factors of a number.
+
+Write a C# program to display the name of a shape (triangle, square, pentagon, hexagon) based on the number of angles entered by the user.
+
+Write a C# program to calculate the factorial of a number using a do..while loop.
+
+Write a C# program to calculate the sum of all even numbers between 1 and 100 using a do..while loop.
+
+Write a C# program to determine if a number entered by the user is a prime number using a do..while loop.
+
+Write a C# program to calculate the average of numbers entered by the user until they enter a negative number using a do..while loop.
+
+Write a C# program that prompts the user to input any number of doubles. The program stops if the user enters -100 or counts more than 30. Find the total and count of all items and the average.
+
+Write a C# program to find the factorial of a given number.
+
+Write a C# program to calculate the power of a number.
+
+Write a C# program to find the sum of all numbers divisible by 3 or 5 below a given number.
