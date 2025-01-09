@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\bin\Debug\net8.0\ControlStructure.exe
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\bin\Debug\net8.0\ControlStructure.deps.json
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\bin\Debug\net8.0\ControlStructure.runtimeconfig.json
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\bin\Debug\net8.0\ControlStructure.dll
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\bin\Debug\net8.0\ControlStructure.pdb
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ControlStructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ControlStructure.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ControlStructure.AssemblyInfo.cs
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ControlStructure.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ControlStructure.dll
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\refint\ControlStructure.dll
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ControlStructure.pdb
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ControlStructure.genruntimeconfig.cache
+C:\Users\user\Desktop\AppTrainers\Projects\Task02 Control Structure\ControlStructure\obj\Debug\net8.0\ref\ControlStructure.dll
