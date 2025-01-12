@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\bin\Debug\net8.0\C#Basics(String,Math,Random).exe
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\bin\Debug\net8.0\C#Basics(String,Math,Random).deps.json
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\bin\Debug\net8.0\C#Basics(String,Math,Random).runtimeconfig.json
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\bin\Debug\net8.0\C#Basics(String,Math,Random).dll
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\bin\Debug\net8.0\C#Basics(String,Math,Random).pdb
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\C#Basics(String,Math,Random).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\C#Basics(String,Math,Random).AssemblyInfoInputs.cache
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\C#Basics(String,Math,Random).AssemblyInfo.cs
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\C#Basics(String,Math,Random).csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\C#Basics(String,Math,Random).dll
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\refint\C#Basics(String,Math,Random).dll
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\C#Basics(String,Math,Random).pdb
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\C#Basics(String,Math,Random).genruntimeconfig.cache
+C:\Users\user\Desktop\AppTrainers\Projects\C#Basics(String,Math,Random)\obj\Debug\net8.0\ref\C#Basics(String,Math,Random).dll
