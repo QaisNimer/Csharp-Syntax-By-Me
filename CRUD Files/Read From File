@@ -1,0 +1,8 @@
+string path = @"C:\Users\USER\Desktop\students.txt";
+var fs = File.OpenRead(path);
+var stremer = new StreamReader(fs);
+string line = "";
+while ((line = stremer.ReadLine()) != null)
+{
+Console.WriteLine(line);
+}
