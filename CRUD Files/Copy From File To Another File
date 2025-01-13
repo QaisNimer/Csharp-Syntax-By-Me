@@ -1,0 +1,9 @@
+var sourceFile = @"C: \Users\USER\Desktop\ReadWriteNumbers.txt";
+var destnationFile = @"C: \Users\USER\Desktop\result.txt";
+var sourceFileStream = File.OpenRead(sourceFile);
+var destnationFileStream = File.Create(destnationFile);
+sourceFileStream.CopyTo(destnationFileStream);
+sourceFileStream.Dispose();
+sourceFileStream.Close();
+destnationFileStream.Dispose();
+destnationFileStream.Close();
