@@ -6,3 +6,5 @@ while ((line = stremer.ReadLine()) != null)
 {
 Console.WriteLine(line);
 }
+streamer.Dispose();
+streamer.Close();
