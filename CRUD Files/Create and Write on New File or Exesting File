@@ -1,0 +1,20 @@
+string path = @"C:\Users\USER\Desktop\students.txt";
+string pathForWrite = "C:\\Users\\USER\\Desktop\\students-addx.txt";
+//Create
+var fsForWrite = File.Create(pathForWrite);
+var stream = new StreamWriter(fsForWrite);
+var fs = File.OpenRead(path);
+var stremer = new StreamReader(fs);
+string line = "";
+while ((line = stremer.ReadLine()) != null)
+{
+    stream.WriteLine(line + " - x");
+}
+stremer.Dispose();
+stremer.Close();
+fs.Dispose();
+fs.Close();
+stream.Dispose();
+stream.Close();
+fsForWrite.Dispose();
+fsForWrite.Close();
