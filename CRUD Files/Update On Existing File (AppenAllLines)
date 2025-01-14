@@ -1,0 +1,7 @@
+var path = @"C: \Users\USER\Desktop\students.txt";
+List<string> names = new List<string>();
+Console.Write("Please Enter The First Student Name :");
+names.Add(Console.ReadLine());
+Console.Write("Please Enter The second Student Name :");
+names.Add(Console.ReadLine());
+File.AppendAllLines(path, names);
