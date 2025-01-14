@@ -1,8 +1,0 @@
-var filePath=@"C:\Users\user\Desktop\students.txt";
-var filePathNew=@"C:\Users\user\Desktop\students_NEW.txt";
-using(var fileStream=File.OpenRead(filePath)){
-        using(var fileStreamNew=File.Create(filePathNew)){
-                fileStream.CopyTo(filePathNew);
-        }
-}
-File.Delete(filePath);
