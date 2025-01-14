@@ -1,0 +1,12 @@
+var path = @"C: \Users\USER\Desktop\students.txt";
+List<string> strings = new List<string>();
+var fs = File.Create(path);
+var sw = new StreamWriter(fs);
+Console.Write("Please Enter The First Student Name :");
+strings.Add(Console.ReadLine());
+Console.Write("please Enter The First Second Name :");
+strings.Add(Console.ReadLine());
+foreach (string s in strings)
+    sw.WriteLine(s);
+sw.Dispose();
+sw.Close(); fs.Dispose(); fs.Close();
