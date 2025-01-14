@@ -1,0 +1,7 @@
+await Method();
+
+static aysnc Task Method(){
+Console.WriteLine(" A ");
+await Task.Delay(3000) // 3s
+Console.WriteLine("B");
+}
