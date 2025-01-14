@@ -1,0 +1,5 @@
+var path = @"c: \users\user\desktop\students.txt";
+Console.Write("please enter the first student name :");
+File.AppendAllText(path, Console.ReadLine() + "\n");
+Console.Write("please enter the first second name :");
+File.AppendAllText(path, Console.ReadLine() + "\n");
