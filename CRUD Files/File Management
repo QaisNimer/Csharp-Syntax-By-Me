@@ -1,0 +1,6 @@
+var path = @"C: \Users\USER\Desktop\students.txt";
+//check avaialbility --> return bool flag to determine if the file exeist or not
+File.Exists(path);
+
+//remove files
+File.Delete(path); // remove files from memory using the givven path
