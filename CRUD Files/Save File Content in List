@@ -1,0 +1,14 @@
+var path = @"C: \Users\USER\Desktop\students.txt";
+var fs = File.OpenRead(path);
+var sr = new StreamReader(fs);
+List<string> strings = new List<string>();
+string Line = "";
+while ((Line = sr.ReadLine()) != null)
+{
+    strings.Add(Line);
+
+}
+sr.Dispose();
+sr.Close(); 
+fs.Dispose(); 
+fs.Close();
