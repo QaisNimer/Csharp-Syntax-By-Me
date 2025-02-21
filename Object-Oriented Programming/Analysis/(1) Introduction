@@ -1,0 +1,48 @@
+This is how you can analysis the projects that you have:
+1- Define Scope 
+
+Scope : Set of Object Intractes with each other with specific 
+Operation For Each Kind of object and Specific Proprty to 
+Describe each one of them 
+
+2- Define The Mandontry Object (اركان النظام الاساسية التي لايمكن ان يعمل بدونها )
+ex: admin, students, courses 
+
+
+3- Determine The Software Type 
+
+   A- Customized Software : Depends on the requirements of the clients
+   B- Genernlized Software : here you will use the 
+
+4- OOP 
+
+  ----> Principles 
+      
+1- Abstraction (التجريد )اظهار المكون او شيء ما بابسط صورة ممكنه 
+   a- Summrize the objects (ايجاد قالب عام يضم او يوصف مجموعه من الكائنات )  
+      1- Rerepresent the system object using template (class)     
+         (Admin , Employee , Car , Client , Contract , Insurance , Invoices,Rating)
+      2- Define Property For Each Template (Class) 
+          -Admin  (Name , Email , Password)
+          -Client  
+          -Employee (Name , Email , Password,Phone,NationalId,Signuture,Postion,Permission)
+          -Car (Platno , Brand, Modle , MY , Color )
+          -Contract (StartDate, EndDate)
+          -Insureance(Type,Amount, Description , StartDate, End Date)
+          -Invoice(Amount,Tax,Discount)
+          -Rating(Comment , StartAmount)
+   b- Define the object Behaviour 
+      a- Actor (active users on the system - make changes)  ----> Hummman 99%  , AI / System 1%
+      b- Object (Car  , Contract,Insurance,Invoice,Rating)
+      c- Lookup  
+      
+     ----> Determine The Opertions for Each Actor / Each Class / Each Services 
+           -----> Determine Return DataType , NameofOperation , Inputs for This Opertation 
+
+   c-  Generlization & Speclization (Restucturing)
+        2- Inherintance 
+          ----> Determine Relationships between Classes (Assoication , Inhertinace , Composition / Aggergration )
+        3- Ploymorephism 
+          ----> Implementation With Diffenet Ways (Overload / Override)
+        4- Encapsulation 
+           ----> Mange The Access Level for Project Components  
