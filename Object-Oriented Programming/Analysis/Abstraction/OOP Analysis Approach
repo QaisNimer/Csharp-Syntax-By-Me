@@ -1,0 +1,37 @@
+1- Abstraction (التجريد )اظهار المكون او شيء ما بابسط صورة ممكنه 
+   a- Summrize the objects (ايجاد قالب عام يضم او يوصف مجموعه من الكائنات )  
+      1- Rerepresent the system object using template (class)     
+         `
+      2- Define Property For Each Template (Class) 
+          -Admin  (Name , Email , Password)
+          -Client  
+          -Employee (Name , Email , Password,Phone,NationalId,Signuture,Postion,Permission)
+          -Car (Platno , Brand, Modle , MY , Color )
+          -Contract (StartDate, EndDate)
+          -Insureance(Type,Amount, Description , StartDate, End Date)
+          -Invoice(Amount,Tax,Discount)
+          -Rating(Comment , StartAmount)
+   b- Define the object Behaviour 
+      a- Actor (active users on the system - make changes)  ----> Hummman 99%  , AI / System 1%
+      b- Object (Car  , Contract,Insurance,Invoice,Rating)
+      c- Lookups (قيم ثابتة لا تتغير ولكن كثيرة, مثل التقييم فهو من 1-5 فقط ف بدل ما يصير عندي تكرار بالقيم بعملهم بجدول لحال)
+      
+     Admin Manage Multiple Employee 
+     Admin Manage multiple Car 
+     Admin Manage Multiple Contract 
+     For Each Contract Admin can mange Insurance , invoice,explore rating 
+
+     ----> Determine The Opertions for 
+          1- Each Actor 
+          2- Each Class
+          3- Each Services 
+           -----> Determine Return DataType , NameofOperation , Inputs for This Opertation 
+
+   c-  Generlization & Speclization (Restucturing)
+        2- Inherintance 
+          ----> Determine Relationships between Classes (Assoication , Inhertinace , Composition / Aggergration )
+        3- Ploymorephism 
+          ----> Implementation With Diffenet Ways (Overload / Override)
+        4- Encapsulation 
+           ----> Mange The Access Level for Project Components  
+
