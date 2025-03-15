@@ -1,0 +1,42 @@
+USE [ToDoListDb]
+GO
+
+INSERT INTO [dbo].[Person]
+           ([FullName]
+           ,[Email]
+           ,[Password]
+           ,[Gender]
+           ,[JoinDate]
+           ,[Phone])
+VALUES
+           ('John Doe', 'johndoe@example.com', 'Pass123', 'Male', GETDATE(), '1234567890'),
+           ('Jane Smith', 'janesmith@example.com', 'Secure123', 'Female', GETDATE(), '0987654321'),
+           ('Robert Brown', 'robertbrown@example.com', 'MyPass456', 'Male', GETDATE(), '1122334455'),
+           ('Emily White', 'emilywhite@example.com', 'Emily1234', 'Female', GETDATE(), '5566778899'),
+           ('Michael Green', 'michaelgreen@example.com', 'GreenPass', 'Male', GETDATE(), '4433221100');
+GO
+
+
+INSERT INTO [dbo].[Activity]
+           ([Title]
+           ,[Description]
+           ,[Priority]
+           ,[Status]
+           ,[StartDate]
+           ,[EndDate])
+VALUES
+           ('Complete Project Documentation', 'Prepare detailed documentation for the project, including requirements and architecture.', 'High', 'In Progress', GETDATE(), DATEADD(DAY, 7, GETDATE())),
+           ('Team Meeting', 'Schedule a team meeting to discuss project updates and next steps.', 'Medium', 'Pending', GETDATE(), DATEADD(DAY, 1, GETDATE())),
+           ('Code Review', 'Review the code submitted by team members for quality and adherence to standards.', 'Low', 'Completed', DATEADD(DAY, -7, GETDATE()), GETDATE());
+GO
+
+INSERT INTO [dbo].Reource
+           ([Type]
+           ,[Title]
+           ,[Link])
+VALUES
+           ('Video', 'Introduction to SQL', 'https://example.com/sql-introduction'),
+           ('Article', 'Best Practices for Database Design', 'https://example.com/database-best-practices'),
+           ('Documentation', 'SQL Server Official Docs', 'https://docs.microsoft.com/en-us/sql/');
+GO
+
