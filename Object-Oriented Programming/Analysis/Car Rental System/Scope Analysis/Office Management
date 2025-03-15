@@ -1,0 +1,59 @@
+Admin (Office Manager  )
+   -create office with admin by (Title Ar / TitlteEn / Bio Ar , Bio En  / Image , List of Location , contact info
+   , conditions , startAt , EndAt , EstalishmentDate , DocumentForOffice
+,AdminName,AdminEmail,AdminPhone,AdminPassword )
+
+   - each location should contins of (Branch Name , Country ,City , Area , Lat , Long  )
+   - each contact should (Phone , Phone , WhatsLink,FaceLink , Instalink, email )
+
+
+-  login (by phone / email --> should  be unique)  & password with at least 8 character and 
+   1 leter 1 symbol 1 digit 
+   after each succussful login otp code will be sent to client with 6 digits length 
+   office manger account should be activited 
+
+
+
+- Update Request
+
+-Submit Request 
+
+
+- Car Management  
+   - list all avalable car  by (Brand , Model , Year , Price , Main Image , Status )
+   -  Get Details Brand , Model , Year , Price , Main Image , Status  fule Type , EngineCapcity ,
+ Seats  , PalateNumber ,  Color , Gear , list of Images one of them mandatory 
+   -  Create Car (DocImages)
+   - update 
+   -manage activation 
+
+- Employee Management 
+
+  -list (id , name , phone , email , role )
+  - details (branch , profileimage,nationality )
+  - create 
+  -update
+  -manageActivation
+
+-Rental Request Management 
+
+  - Get all current request id , userName , Phone , Days , Car 
+  - Get Request Details(IdentityImage,DrivingLicnceImage, PaymentMethod,DeliveryType,,Location,ReservationDate - EndDate
+    Status,IsPaid)
+  -Approve / Reject Request 
+
+- Reserviation Managemeent  (id , userName , Phone , Days , Car  , RealeseDate) 
+- Get Reserviation Details 
+- Update 
+- SendAlert 
+- CloseReservation
+- RateUser
+- Creaet Reciving Car Report 
+
+- History of Reservition 
+   - Reserviation Managemeent  (id , userName ,, Car  , ReservationDate,RealeseDate,Rate) 
+- Get Reserviation Details 
+   
+
+   
+
