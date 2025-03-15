@@ -6,3 +6,25 @@
    Task
 
 3- Determine Helper
+_________________________________________________________________
+1- Make All Operation Awatable but use the async / await keyword only inside class
+
+
+2- Classes must have defualt proprty 
+
+   - Id : Unique Identifier foreach copy from this class 
+   - CreationDate : ToIndicate when this copy has been created 
+   - CreateBy : To Indication who is the responsable person to create this copy 
+   - UpdateDate : 
+   - UpdateBy : 
+   - IsDeleted : boolean flag to detmine if this copy still usable or not 
+
+3- Define Share Class to hold the above property this class could be called as 
+
+   (Share,Entity,MainEntity,ParentEntity)
+
+4- C# Dose not Allowed Multiple Inheritance (Class C can Gain Shared Property From class A and b at the same time )
+
+5- Inhertiance on Code Mean Extract Proprty and Behaviour From Share/General/Parent (Extend Behavior/Attribute From Class A into Class B)
+
+6- Parent Class Access modifer should be same as child or bigger than chiled
