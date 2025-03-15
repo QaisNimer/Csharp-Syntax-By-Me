@@ -1,0 +1,27 @@
+OOP Approach 
+
+
+1- File Structure 
+
+(Shared Helper (Helper,Generic,Extension) , Custom(Entites/Interfaces/Services))
+
+ Entites ---> to Represent System Classes  (Object Template)  (System Compnent )
+ Contract ---> to Represent Blue Print of the Provided Service on the system  (Abstract Method)
+ Service ----> to Hold the real services Implementation 
+
+ ---- (Extentions/Generic/Helper )Helper 
+
+
+2- on Entites Folder Add The system Class
+
+3- on each class inside Entites Folder Add Class Proprty 
+
+4- Divide the implement Classes into Actor and object then detemine the relationship 
+
+5-     Divide  The Opertions for Either
+          1- Each Actor (look at each actor and list all possible operation in his contract class)
+          2- Each Class (look at each class in the system and list all possible CRUD Operation)
+          3- Each Services (look at ther service category on the system (RentalRequest,SignContract,EndRental))
+
+Create Project With Your Name   ex (QaisNimer)
+
