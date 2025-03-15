@@ -1,0 +1,13 @@
+CREATE PROC UpdatePassword (
+@Email varchar(max),
+@NewPassword varchar(max)
+)as
+begin 
+Update Person
+set [Password] = @NewPassword
+where [Email] = @Email
+end 
+
+
+EXEC UpdatePassword @Email = 'janesmith@example.com' , @NewPassword = 'Z3160@jase'
+
