@@ -1,0 +1,21 @@
+Update Person 
+Set UpdateBy = 'Qais'
+
+Update Person 
+Set UpdateBy = 'Not Qais'
+Where UpdateBy is not null
+
+Update Person 
+Set UpdateBy = 'Qais',UpdateDate = GetDate()
+Where UpdateBy is not null
+
+Update Activity 
+Set UpdateBy = 'Qais',UpdateDate = GetDate()
+Where UpdateBy is  null
+
+Update Reource 
+Set UpdateBy = 'Qais',UpdateDate = GetDate()
+Where UpdateBy is  null
+
+Delete From Person where Email like 'johndoe@example.com' -- Remove All Records 
+
