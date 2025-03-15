@@ -1,0 +1,13 @@
+CREATE VIEW GetAllPerson as
+SELECT * FROM PERSON
+
+
+CREATE VIEW GetAllActivity  as
+SELECT *FROM Activity
+
+CREATE VIEW GetAllReourse as
+SELECT * FROM Reource
+
+
+SELECT * From GetAllReourse
+
