@@ -1,0 +1,53 @@
+CREATE DATABASE [ToDoListDb]
+
+USE [ToDoListDb]
+--DROP DATABASE [ToDoListDb]
+
+CREATE TABLE Person(
+CreationDate DateTime ,
+UpdateDate DateTime,
+CreatedBy varchar(max),
+UpdateBy varchar(max),
+FullName varchar(60),
+Email varchar(30),
+[Password]  varchar(16),
+Gender varchar(6),
+JoinDate DateTime,
+Phone varchar(10),
+);
+Alter Table Person Add Id Int Primary key identity(1,1)
+Alter Table Person Alter Column FullName varchar(60) not null
+Alter Table Person Alter Column Email varchar(30) not null 
+Alter Table Person Alter Column [Password]  varchar(16) not null
+Alter Table Person Add Constraint UK_Email Unique (Email)
+Alter Table Person Add Constraint UK_Phone Unique (Phone)
+Alter Table Person Add Constraint DF_CreationDate Default GetDate() For CreationDate
+Alter Table Person Add Constraint DF_CreateBy Default 'System' For CreatedBy 
+
+Alter Table Person Add Constraint CH_Password 
+CHECK (Len([Password])>=6 AND Len([Password])<=16)
+
+CREATE TABLE Activity(
+Id INT primary key identity(1,1),
+CreationDate DateTime Default GetDate(),
+UpdateDate DateTime,
+CreatedBy varchar(max) Default 'System',
+UpdateBy varchar(max),
+Title varchar(100) not null CHECK (Len(Title)>=5),
+[Description] varchar(500) not null,
+[Priority] varchar(100) not null,
+[Status] varchar(100) not null,
+StartDate DateTime not null,
+EndDate DateTime not null
+);
+
+Create Table Reource(
+Id  INT primary key identity(1,1),
+[Type] varchar(100) not null,
+[Title] varchar(100) not null,
+[Link] varchar(100) not null,
+CreationDate DateTime Default GetDate(),
+UpdateDate DateTime,
+CreatedBy varchar(max) Default 'System',
+UpdateBy varchar(max));
+
