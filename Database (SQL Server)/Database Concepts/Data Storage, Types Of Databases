@@ -1,0 +1,52 @@
+Data Storgare 
+
+Memory (Ram ) ------ > Easy Manuplicatiion and accessabilty for the data  * ( Data is Tempororay )
+
+
+File   ------> Diffrent Format/ Diffrenent Structure
+               Size ---> Need More Executation Time 
+               Name ---> Specific Path / SPecific Name (Changeable With out use the Appliucation)
+               Isoulated Collecation ----> Each file Spearated (Indviual) 
+
+
+
+Database  -----> Component on HardDisk Used To Store Data using specific Strucutre 
+
+
+Database ------> Related Colleaction of Data Stored in HardDisk or Cloud Storage using Specific Structure
+          
+                 1- Realted Colleaction 
+                 2- Hard Disk (Local / Server) / Cloud Storage
+
+
+Database Type  
+
+   1- Relational Database  (SQL Databases)    ----> Goverment Soulution / Orgainzation Soulution 
+
+      - Related Colleaction of Data Stored in HardDisk or Cloud Storage Structure as tables 
+      - To Make Data Manipulatiuon (Creare / Update / Remove / Read / )  We Should Use DBMS (Data base Management System)
+      - DBMS (Data base Management System)  Based on Programming Language (SQL) Structured Query Language 
+      - Used With Highly Constrinsted System (System with Specific and Restrected Relation ship and Data Format )
+
+       ----> Admin (name , email , password)
+       
+   2- Non Relational Database (No SQL Database)  (Firebase / Mongo Db)  ----> Shared / Flexable Services 
+        (Notification , Message , Chate , Events , Suggestion, Problem )
+        Text , Voiuce , Image , Image With Text , Video , Video With Text , Replay , GIf , Stickers , POLL 
+
+       - Related Colleaction of Data Stored in HardDisk or (Cloud Storage) Structure as Documents (JSON) --> Java Script Object Notation
+       - Flexable Format 
+       
+               
+Data base Management System (DBMS)
+Software / Application Used To Allow User Access and Manage Database File Using Progrmming Language Called (SQL)
+
+
+DBMS  - ---> Create database and Manage its Objects ( 80 % )
+
+Microst SQL Server 
+My SQL 
+My SQL Lite 
+Orcal Database 
+MaiaDb 
+
