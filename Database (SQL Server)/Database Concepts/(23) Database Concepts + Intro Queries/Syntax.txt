@@ -1,0 +1,47 @@
+-- One Line Comment 
+
+/*
+Multil Line Comment 
+*/
+
+-- Systanx Recommend to be written using capital Leter 
+-- no case sensetive programming language   A  = a 
+-- (kEYWORD)  (OBJECT) (COMPLETE..)
+
+USE [Students Managment Db]
+
+
+CREATE TABLE  Students (
+--AT lEAST ON COLUMN (NAME DATATYPE CONSTRAINTS)
+[First Name] VARCHAR(15),
+[Last Name] varchar(15),
+Email varchar(50),
+Phone varchar(50),
+[Password] varchar(16),
+Age Int,
+JoinDate DateTime,
+IsSingle BIT
+);
+
+CREATE TABLE Certification(
+CourseName VARCHAR(max),
+Title VARCHAR(max),
+Orgnization VARCHAR(max),
+[Date] date,
+Mark Float
+)
+
+--------------- Manipultation Data ------------------------
+
+--Insert Data 
+-- Single Full Insert 
+INSERT INTO Students VALUES ('Jasser','Alsher','joshaer17@gmail.com','0787700833','Z312f0',27,'2024-12-08',1)
+-- Multiple Full insert
+INSERT INTO Students VALUES 
+('Jasser','Alsher','joshaer18@gmail.com','0787700833','Z312f0',27,'2024-12-08',1),
+('Jasser','Alsher','joshaer19@gmail.com','0787700833','Z312f0',27,'2024-12-08',1),
+('Jasser','Alsher','joshaer20@gmail.com','0787700833','Z312f0',27,'2024-12-08',1),
+('Jasser','Alsher','joshaer21@gmail.com','0787700833','Z312f0',27,'2024-12-08',1);
+
+-- Custom Insert 
+INSERT INTO Students ([First Name],[Last Name]) VALUES ('Randah','Waqqad')

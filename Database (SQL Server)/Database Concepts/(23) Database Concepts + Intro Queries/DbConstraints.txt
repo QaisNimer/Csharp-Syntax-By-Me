@@ -1,0 +1,36 @@
+DDL   ----> To Manage Database and it's Object 
+
+1- Database 
+
+2- Database Object (Table , View , Storeed , Funcation , Job , Trigger)
+
+3- Management Backaup 
+
+
+DML   ----> To Manage The exising data inside data base 
+
+Table (Insert , Read (Query) , (Updatre) , (Delete))  
+
+
+
+======> Files   (What is the expected Issues Related to store data in files ? ) 
+
+       1- No Identifier to sperate the exsing rows / data 
+       2- No Validation For Null / Empty Data  
+       3- No Validation For The Inserted Data 
+       4- No Techniques For Auto Generated Value / Auto Fill / Auto Complete 
+       5- No Relations
+       6- No Possible to solve Dublication  
+       7- No Search Indexes / Specific Algorithm  
+
+======> Data base Constraints 
+
+       1- No Identifier to sperate the exsing rows / data  (Primary Key)
+       2- No Validation For Null / Empty Data  (Not Null Constraints )
+       3- No Validation For The Inserted Data  (Check Constints)
+       4- No Techniques For  Auto Fill / Auto Complete  (Default Constrinsts)
+       ---> Auto Generated Value    (Idenetity)
+       5- No Relations (Forigen Key)
+       6- No Possible to solve Dublication  (Unique Constrinsts)
+       7- No Search Indexes / Specific Algorithm   (Indexes)
+       

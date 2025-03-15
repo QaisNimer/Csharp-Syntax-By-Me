@@ -1,0 +1,8 @@
+username/useraccount@domainName.extention (.com/.edu/.jov/.net)
+
+1- username start with character and no spaces at least one character
+2- domain al least two character  
+3- extention at least 
+4- overall @    .
+
+check email  like '_%@__%.__%'

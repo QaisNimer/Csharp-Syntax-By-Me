@@ -1,0 +1,20 @@
+-- Ordering / Sorting (ORDER BY)
+-- string A --> Z  Z --> A 
+-- Numeric (0-@)  (@- - @) ASC DESC
+
+SELECT * FROM Calls ORDER BY (Rate + Duration) DESC
+
+SELECT * FROM Callers ORDER BY FirstName,MiddleName,LastName
+
+SELECT * FROM Callers AS c ORDER BY (c.FirstName + c.MiddleName+ c.LastName) DESC, c.Id DESC
+
+------ SP -----
+CREATE PROC GetCallHistory (@CallerId int) as
+begin 
+select * from Calls where CallerId = @CallerId 
+order by CreationDate desc
+end
+
+-- EXEC 
+
+EXEC GetCallHistory @CallerId = 3

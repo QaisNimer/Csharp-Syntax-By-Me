@@ -1,0 +1,16 @@
+C# Type    ---- > Data base ( SQL Server ) 
+
+Byte     --------> TinyInt
+Short    --------> SmallInt
+Int      --------> Int
+Long     --------> BIGInt
+Float    --------> Float
+Double   --------> Float , Decimal
+Decimal  --------> Decimal
+Char     --------> VarChar , NVarchar
+String   --------> VarChar(Length/MAX) , NVarchar(Length/MAX)
+Boolean --------> Bit  (0  false, 1 true)
+DataTime  -----> Datetime
+DataOnly   ---> date 
+TimeStamp ---> time(7)
+byte []   ---> VarBinary(Length/Max)

@@ -1,0 +1,22 @@
+-- Cross Join (bing each row from result set  A with all rows in result set B)
+SELECT * FROM Callers,Calls
+SELECT * FROM LookupTypes,LookupItems
+
+-- Inner Join 
+
+SELECT * FROM Callers JOIN  Calls ON Callers.Id = Calls.CallerId
+SELECT * FROM LookupItems JOIN LookupTypes ON LookupItems.TypeId = LookupTypes.Id
+
+-- LEFT JOIN (Bring all records in table A and if there 's matched row in table b i will combine theme)
+SELECT * FROM Callers LEFT JOIN  Calls ON Callers.Id = Calls.CallerId
+
+-- Right JOIN (Bring all records in table B and if there 's matched row in table ai will combine theme)
+SELECT * FROM Callers right join CountryCodes on Callers.CountryCodeId = CountryCodes.Id
+
+-- FUll Join 
+SELECT * FROM Callers full join CountryCodes on Callers.CountryCodeId = CountryCodes.Id
+
+-- Self Join 
+SELECT * FROM Persons AS P1 JOIN Persons AS P2 ON P1.SupervisorId = P2.iD
+
+

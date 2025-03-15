@@ -1,0 +1,6 @@
+like ''   _ underscore --> represt one exisiting character
+          % percent sign -->> represent char collection (0 or more)
+
+
+
+like '_%@__%.__%'

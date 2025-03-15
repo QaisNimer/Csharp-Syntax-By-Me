@@ -1,0 +1,46 @@
+SELECT * 
+FROM Employees
+ORDER BY EmployeeID
+OFFSET 10 ROWS FETCH NEXT 5 ROWS ONLY;
+
+
+-- First (Top 1 )
+select top(1) * from calls 
+-- Single (only 1)
+select top(1) * from calls 
+--must add sorting
+select * from Calls  order by Id offset 0 rows -- (get all elemenet with out ignore any thing)
+select * from Calls  order by Id offset 0 rows fetch next 1 rows only --(get only the top record)
+select * from Calls  order by Id desc offset 0 rows fetch next 1 rows only --(get only the last record)
+
+-- second largest number 
+select * from Calls  order by Duration desc offset 1 rows fetch next 1 rows only
+
+--Pagination (PAGE SIZE - 3)
+
+SELECT * FROM Callers ORDER BY ID OFFSET 0 ROWS FETCH NEXT 3 ROWS ONLY
+SELECT * FROM Callers ORDER BY ID OFFSET 3 ROWS FETCH NEXT 3 ROWS ONLY
+SELECT * FROM Callers ORDER BY ID OFFSET 6 ROWS FETCH NEXT 3 ROWS ONLY
+SELECT * FROM Callers ORDER BY ID OFFSET 9 ROWS FETCH NEXT 3 ROWS ONLY
+
+-- Page index should be start from 0 
+CREATE PROC GetCalls(@Size int,@index int) as 
+begin 
+SELECT * FROM Calls ORDER BY ID
+ OFFSET (@Size*@index) ROWS FETCH NEXT @Size ROWS ONLY
+end
+
+-- Top  --> Target the top rows in the result set 
+
+SELECT  TOP(5) * FROM Calls ORDER BY RATE DESC
+
+-- Dublication 
+
+SELECT DISTINCT (CALLERiD) FROM Calls
+
+SELECT  (CALLERiD) FROM Calls
+
+SELECT   DISTINCT (title) ,[Description],Duration,CallerId FROM Calls ORDER BY RATE DESC
+
+
+ 

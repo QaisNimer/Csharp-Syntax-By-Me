@@ -1,0 +1,9 @@
+-- Fetch all columns and row 
+SELECT * FROM STUDENTS
+
+-- Fetch Sepcific columns and all rows 
+
+SELECT  Id,Phone , Email, FirstName,LastName  FROM STUDENTS
+
+--Fetch Customized  column  (using alis)
+SELECT  Id,Phone , Email, (FirstName + '  '+ lastName) FullName  FROM STUDENTS

@@ -1,0 +1,13 @@
+CREATE VIEW GetALLStudents As
+SELECT *
+  FROM [SDBTier].[dbo].[STUDENTS]
+
+drop view GetALLStudents
+
+alter view GetALLStudents as 
+
+SELECT Id, (FirstName + ' ' + LastName) as [Full Name],email,phone
+  FROM [SDBTier].[dbo].[STUDENTS]
+
+
+SELECT * FROM GetALLStudents

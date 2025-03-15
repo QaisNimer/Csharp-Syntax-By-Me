@@ -1,0 +1,23 @@
+-- Group  (group by)
+
+SELECT CallerId,MAX(Duration) FROM Calls GROUP BY CallerId
+
+-- AVG RATE BY EACH CALLER 
+
+SELECT CallerId,AVG(RATE) FROM Calls GROUP BY CallerId
+
+-- Caller information ( )caller by the max rate (calls)
+SELECT CallerId,AVG(RATE) as rate FROM Calls GROUP BY CallerId-- step 1 get all caller with rate
+
+SELECT CallerId,AVG(RATE) as rate FROM Calls GROUP BY CallerId order by rate desc --step 2 get the top caller
+
+select top(1) 
+
+
+
+
+
+
+
+
+

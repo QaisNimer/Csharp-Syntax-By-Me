@@ -1,0 +1,47 @@
+Students   (First Name , Last Name , Jordainain Phone Number , Email , Passsword , Age , IsSingle , JoinDate) 
+
+// ------> Certification in Course   (Coursename , Certification Title , Orgnization , Data, Mark)
+
+
+1- Create Data base   
+
+   CREATE  DATABASE [Students Managment Db]
+
+
+2- Drop Data base
+
+   DROP DATABASE [Students Managment Db]
+
+3- Ceate Table 
+
+CREATE TABLE  Students (
+--AT lEAST ON COLUMN (NAME DATATYPE CONSTRAINTS)
+);
+
+CREATE TABLE  Students (
+--AT lEAST ON COLUMN (NAME DATATYPE CONSTRAINTS)
+[First Name] VARCHAR(15),
+[Last Name] varchar(15),
+Email varchar(50),
+Phone varchar(50),
+[Password] varchar(16),
+Age Int,
+JoinDate DateTime,
+IsSingle BIT
+);
+
+
+4- Insert Data Table 
+
+--Insert Data 
+-- Single Full Insert 
+INSERT INTO Students VALUES ('Jasser','Alsher','joshaer17@gmail.com','0787700833','Z312f0',27,'2024-12-08',1)
+-- Multiple Full insert
+INSERT INTO Students VALUES 
+('Jasser','Alsher','joshaer18@gmail.com','0787700833','Z312f0',27,'2024-12-08',1),
+('Jasser','Alsher','joshaer19@gmail.com','0787700833','Z312f0',27,'2024-12-08',1),
+('Jasser','Alsher','joshaer20@gmail.com','0787700833','Z312f0',27,'2024-12-08',1),
+('Jasser','Alsher','joshaer21@gmail.com','0787700833','Z312f0',27,'2024-12-08',1);
+
+-- Custom Insert 
+INSERT INTO Students ([First Name],[Last Name]) VALUES ('Randah','Waqqad')

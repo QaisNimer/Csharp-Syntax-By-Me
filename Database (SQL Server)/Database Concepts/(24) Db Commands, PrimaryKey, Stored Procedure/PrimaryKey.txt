@@ -1,0 +1,21 @@
+//PrimaryKey
+ALTER TABLE STUDENTS ALTER COLUMN Id Int Not Null
+ALTER TABLE STUDENTS ADD CONSTRAINT PK_SID primary KEY 
+(Id);
+
+
+
+=================================
+
+CREATE TABLE  Students (
+Id int primary key identity(1,1),
+--AT lEAST ON COLUMN (NAME DATATYPE CONSTRAINTS)
+[First Name] VARCHAR(15),
+[Last Name] varchar(15),
+Email varchar(50),
+Phone varchar(50),
+[Password] varchar(16),
+Age Int,
+JoinDate DateTime,
+IsSingle BIT
+);

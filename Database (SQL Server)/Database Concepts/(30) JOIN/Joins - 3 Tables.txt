@@ -1,0 +1,13 @@
+SELECT C.FirstName,C.LastName,LI.Name FROM Callers AS C JOIN LookupItems AS LI ON 
+C.CityId = LI.Id
+
+
+SELECT C.FirstName,C.LastName,CC.Sym,CC.Code FROM Callers AS C JOIN CountryCodes AS CC ON 
+C.CountryCodeId = CC.Id
+
+-- fIRST NAME , LAST NAME , CITY , SYM , CODE 
+SELECT C.FirstName,C.LastName,LI.Name,CC.Sym,CC.Code FROM 
+Callers AS C inner JOIN LookupItems AS LI ON C.CityId = LI.Id -- (ResultSet)
+/*(ResultSet) */left JOIN CountryCodes AS CC ON C.CountryCodeId = CC.Id -- (ResultSet)
+
+

@@ -1,0 +1,129 @@
+Library System:
+Admins
+
+Author
+Book(M-M) author has many book and book has many author
+Blog (1 author has many blogs - M)
+
+Client
+Rate Book (1-M) message, rate out of (1-10) 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1- DEFINE SCOPE (LIBRARY MANAGEMENT SYSTEM)
+2- MANDETORY OBJECTS (AUTHOR - BOOK- ADMIN)
+3- SOFTWARE TYPE (CUSTOMIZED)
+ {
+	- Admin Account Should be AVAILABLE before anything (seeding data)
+	- Admin will LOGIN to the system
+	- admin should be able to ADD AUTHORS By (Full Name , Email , Password, Nationality, Image, Category, Bio)
+	- Admin should be EXPLORE AUTHORS BY (Name, email, image, nationality)
+	- Admin should be able to DEACTIVATE/ACTIVATE AUTHORS ACCOUNT
+	- admin should be able EDIT(email, category, bio, full name)
+	- admin should be able to EXPLORE ALL BOOKS by (title, category, published date, rate, authors)
+	- admin should be able to EXPLORE SPECIFIC BOOK DETAILS (title, category, authors, comments, rate, publish date, link)
+	- admin should be able to APPROVE / DENY book publish
+	- admin should be able to EXPLORE BLOG
+	- admin should be able to EXPLORE BLOG DETAILS
+	- Admin should be able to APPROVE / DISAPPROVE blog publish
+	- admin should be able to EXPLORE CLIENTS
+	- admin should be able to DEACTIVATE / AVTIVATE Client Account
+
+	- Author should be able to login
+	- Author should be able to MANAGE BOOK (CRUD OPERATIONS (read all books , specific book ) )
+	-    Author should be able to MANAGE BLOGS 
+	-  Author should be able to EXPLORE RATINGS
+	- Author should be able to logout
+
+	-  Client should be able to login
+	- Client should be able to EXPLORE BLOGS 
+	- Client should be able to EXPLORE BOOKS
+	- Client should be able to EXPLORE BOOKS DETAILS
+	- Client should be able to DOWNLOAD BOOKS
+	- Client should be able to RATE BOOKS
+	- Client should be able to LOGOUT
+
+}
+4- Summarize system object (abstraction)
+shared attributes(id, createdby, updatedby,isActive,updatedate, creationdate)
+	A- Admin: Fullname, email, password
+	B- Author: FullName , email, password, bio, image, nationality, category
+	C- Book: title, description, serial, category, coverImage, downloadlink, language, publish date
+	D- Blog : title, description, image?, video?
+	E- Client: FullName , email, password, bio, image, nationality, category, phone
+	F- Rate: Message, RateAmmount
+5- Generlization and specialization (Restructuring) to clearify the system architecture: 
+No specialization but i have generalization:
+if i am working oop -> parent enitity 
+		person
+		client , author, admin
+		book
+		blog
+		rate
+but here:
+- Admin , client, author ---> Person
+- Person, Book, Blog, Rate ----> ParentEntity
+6- Define relationships: 
+	A- inheritance: 
+		- Combine Everything in one table:  عدد من الشايلدز بينهم كثير خصائص مشتركة , واللي مو مشترك خليه نلابيل
+		- Create Child and add the shared element in each child: خد المشترك ووزعه عليهم كلهم
+		- Create parent and child and put a relationship between them (Complex and not efficient)
+		****** GO TO RESULT 1 HERE:
+	B- Composition:
+After Result one i have these components: 
+	- Person: (M-M)Book    (1-M) Blog   (M-M) Rate {Note: The admin isn't countable here because the shared attributes helped me to avoid do relation                                                                                                                                     between the admin and another objects in system (1 Auther -> M Books , M Books -> M                                                                                                                                     Authers, so the relation is m-m between Author and Book)
+                                                                                                                                   Now (1 Client -> M Books , M Books -> M Client , the relation between Client and books is m-m)
+                                                                                                                                   so m-m % m-m , the Final Relation between Person and Books is M-M}.
+	- Book
+	- Blog
+	- Rate (weak entity): depend on another enity orrrrrrrr came from relationship between 2 enities.
+			so is it single dependent or multi-dependent (Composition , depend on 2 entites.)
+	C- Association, Aggregation: 
+--------------------------------------------------------------------------------
+
+========================================= Result 1 =================================================================
+Person 
+Book
+Blog
+Rate
+so i  have the system object and relationships
+==================================================================================================================
+7- Emplement ER-Diagram:
+	put the entities without the weak entity
+	if it is weak entity:	     -> single dependent : put them on the er diagram as weak entity 
+			     |
+			     -> Multi dependent: as relationship 
+	so rate depend on book and person so it's multi-dependent, so it's a relationship many to many between person and book
+so now i have only : 
+- Person: (M-M)Book    (1-M) Blog   
+	- Book
+	- Blog
+	DONEEEEEEEEEEEEEEEE- Rate (weak entity): depend on another enity orrrrrrrr came from relationship between 2 enities.
+			so is it single dependent or multi-dependent
+
+now another relation between person and books (many to many)
+so now i have only : 
+- Person:                   (1-M) Blog   
+	- Book
+	- Blog
+	DONEEEEEEEEEEEEEEEE- Rate (weak entity): depend on another enity orrrrrrrr came from relationship between 2 enities.
+			so is it single dependent or multi-dependent
+
+
+now between person and Blog 
+so now i have only : 
+- Person:
+	- Book
+	- Blog
+	DONEEEEEEEEEEEEEEEE- Rate (weak entity): depend on another enity orrrrrrrr came from relationship between 2 enities.
+			so is it single dependent or multi-dependent
+so no more relations.
+
+8- Emplement Database Tables and Constrains:
+	DeNormalization or Normalization
+	i will choose normalization : Table for(ACTORS,OBJECTS,LOOKUPS(داتا مكررة كثير مثل الناشوناليتي كلهم اردنيين الا من رحم ربي وهكذا)(nationality, category, language))
+	i will choose Denormalization: Table For(ACTOR, Objects)
+
+for lookups i have 2 approuches: 1- separate tables for lookups like: lookup item table , lookup type table : recommended when they have the same takween (id, name)
+			      2- one table for lookup like countryCode 
+9- Fill Testing Data dynamically (5 person , 10 books, 3 blogs, ......)
+10- Implement the required schema object (stored procedure/ functions/ view / trigger/ Job)
+11- Test the required business case/ requiermnet (give me a query to get top 10 books last month , ............ ).

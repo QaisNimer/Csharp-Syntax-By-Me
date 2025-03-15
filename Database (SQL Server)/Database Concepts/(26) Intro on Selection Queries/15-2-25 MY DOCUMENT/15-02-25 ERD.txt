@@ -1,0 +1,80 @@
+callsystem:
+
+Create Project To Build API using ASPnet Application To Manage Call Mangement System 
+To Service Caller and Their own calls and the system requirements should be as following 
+
+1- Admin 1 or more person to mange caller each one has Full name and email and password 
+2- Each Admin Add Caller each Caller Has First Name and Middle Name and Last Name and Phone Number in international format and Could add Profile Image for them and email for each one and should be unique
+3- Each Caller May Have One or may call each call should  have id and title and description and call start date and end date then flag to determine is user purches something or not  and rating from 10 for each call
+ 4- admin should be able to see caller by (id , name , eamil , call amount , call rating )
+ 5- admin should be able  to see all call history for caller
+ 6- admin should be able to edit caller and calls information
+ 7- admin should be able to remove call from caller history but keep it on system
+ 8- admin should be able to observe the overall call history (id , caller name , start , end , rate , status  )
+ 9- admin should be able to export calls to excel file
+ 10- admin should be able to search caller by name (frone end side)
+ 10- admin should be able to serach calls by (phone , name , call date , isremoved from history , by rating)
+
+
+1- custom software
+
+2- manditory obj: admin , caller , calls
+
+3- 	Actor: The one who take action:
+	*Admin : name, pass, email
+	LookUps(frequently used object like Nationality (Most of them are jordainians ))
+
+4- admin create caller, caller has(fn,email,pass,phonenumber,image)
+5- caller: on word document
+6-call: on word document
+7- define rules: 
+	* unique attributes:
+		* admin: email 
+		* caller: email,phonenumber.
+  		* call: ___
+	*nullable: 
+		*admin: ___
+		* caller: image
+		* call: ___
+
+	* multivalue attributes:
+		*admin: ___
+		* caller: ___
+		* call: ___
+	* Composite attributes:
+		* caller:
+			* name:  first name, middle name, last name
+			* contry code: status, code
+	* derived attribute: (يتم اشتقاقها بناءا على اتريبيوتس ثانيين)
+NOTE: I WILL PUT THEM IN ANALYSIS BUT NOT IMPLEMENTED IN DB (لا تخزنها ب تيبل في الداتا بيس لانه يتم استنتاجها خلال الكود)
+
+		
+		* admin: ___
+		* caller: call amount (  aggregations وبحسبها من خلال الaggregation لما بدك اياها بعمل)
+		* call: duration (بس طبعا مثل موضوع الديويشن: انا كل مرة بدي اضل احسب , مش منطق , لهيك بهاي الحالة خزنها ف تيبل عشان ما تضل تكرر الحساب وتعمل كومبلكس كالكوليشنز)
+
+
+_______________________________________________________________
+
+Table for caller: 
+caller has an attributes: 
+name(fname,m,name,lname), phonenumber, image, email, createdBy(related to admin), UpdatedBy(related to admin)
+
+table for calls:
+id, title, description, call start date, call end date, flag for purchase, rate , created by (related to caller), updated by (related to admin)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

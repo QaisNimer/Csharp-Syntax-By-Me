@@ -1,0 +1,226 @@
+USE [master]
+GO
+/****** Object:  Database [SDB]    Script Date: 03/02/2025 7:06:53 PM ******/
+CREATE DATABASE [SDB]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'SDB', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\SDB.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'SDB_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\SDB_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+ALTER DATABASE [SDB] SET COMPATIBILITY_LEVEL = 160
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [SDB].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [SDB] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [SDB] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [SDB] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [SDB] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [SDB] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [SDB] SET AUTO_CLOSE ON 
+GO
+ALTER DATABASE [SDB] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [SDB] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [SDB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [SDB] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [SDB] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [SDB] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [SDB] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [SDB] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [SDB] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [SDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [SDB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [SDB] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [SDB] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [SDB] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [SDB] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [SDB] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [SDB] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [SDB] SET  MULTI_USER 
+GO
+ALTER DATABASE [SDB] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [SDB] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [SDB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [SDB] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [SDB] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [SDB] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [SDB] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [SDB] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+USE [SDB]
+GO
+/****** Object:  Table [dbo].[Certifications]    Script Date: 03/02/2025 7:06:53 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Certifications](
+	[CourseName] [varchar](max) NOT NULL,
+	[Title] [varchar](max) NOT NULL,
+	[Orginzation] [varchar](max) NOT NULL,
+	[IssuedDate] [datetime] NOT NULL,
+	[Mark] [float] NOT NULL,
+	[CertificationSerial] [varchar](100) NULL,
+	[CreateDate] [datetime] NULL,
+	[UpdateDate] [datetime] NULL,
+	[CreatedBy] [varchar](max) NULL,
+	[UpdateBy] [varchar](max) NULL,
+	[IsActive] [bit] NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[STUDENTS]    Script Date: 03/02/2025 7:06:53 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[STUDENTS](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [varchar](100) NOT NULL,
+	[LastName] [varchar](100) NOT NULL,
+	[Email] [varchar](100) NOT NULL,
+	[Phone] [varchar](10) NOT NULL,
+	[NationalId] [varchar](10) NOT NULL,
+	[Password] [varchar](16) NOT NULL,
+	[CreateDate] [datetime] NULL,
+	[UpdateDate] [datetime] NULL,
+	[CreatedBy] [varchar](max) NULL,
+	[UpdateBy] [varchar](max) NULL,
+	[IsActive] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[STUDENTS] ON 
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (2, N'Ahmad', N'Salman', N'ahmad.salman@example.com', N'0791234567', N'1234567890', N'Pass1234', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (3, N'Lama', N'Hussein', N'lama.hussein@example.com', N'0792234568', N'1234567891', N'Pass5678', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (4, N'Sara', N'Ali', N'sara.ali@example.com', N'0781234569', N'1234567892', N'Pass9012', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (5, N'Omar', N'Saleh', N'omar.saleh@example.com', N'0771234560', N'1234567893', N'Pass3456', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (6, N'Noor', N'Ahmad', N'noor.ahmad@example.com', N'0793234561', N'1234567894', N'Pass7890', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (7, N'Khaled', N'Saeed', N'khaled.saeed@example.com', N'0782234562', N'1234567895', N'Pass1234', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (8, N'Rami', N'Issa', N'rami.issa@example.com', N'0773234563', N'1234567896', N'Pass5678', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (9, N'Mona', N'Jamal', N'mona.jamal@example.com', N'0794234564', N'1234567897', N'Pass9012', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (10, N'Huda', N'Salem', N'huda.salem@example.com', N'0774234565', N'1234567898', N'Pass3456', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+INSERT [dbo].[STUDENTS] ([Id], [FirstName], [LastName], [Email], [Phone], [NationalId], [Password], [CreateDate], [UpdateDate], [CreatedBy], [UpdateBy], [IsActive]) VALUES (11, N'Yousef', N'Naser', N'yousef.naser@example.com', N'0783234566', N'1234567899', N'Pass7890', CAST(N'2025-02-03T18:50:09.410' AS DateTime), CAST(N'2025-02-03T18:50:09.410' AS DateTime), N'Admin', N'Admin', 1)
+GO
+SET IDENTITY_INSERT [dbo].[STUDENTS] OFF
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UK_CERSERIAL]    Script Date: 03/02/2025 7:06:53 PM ******/
+ALTER TABLE [dbo].[Certifications] ADD  CONSTRAINT [UK_CERSERIAL] UNIQUE NONCLUSTERED 
+(
+	[CertificationSerial] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ__STUDENTS__5C7E359E4FB16AF7]    Script Date: 03/02/2025 7:06:53 PM ******/
+ALTER TABLE [dbo].[STUDENTS] ADD UNIQUE NONCLUSTERED 
+(
+	[Phone] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ__STUDENTS__A9D105349028741D]    Script Date: 03/02/2025 7:06:53 PM ******/
+ALTER TABLE [dbo].[STUDENTS] ADD UNIQUE NONCLUSTERED 
+(
+	[Email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [UQ__STUDENTS__E9AA32FAF39F1532]    Script Date: 03/02/2025 7:06:53 PM ******/
+ALTER TABLE [dbo].[STUDENTS] ADD UNIQUE NONCLUSTERED 
+(
+	[NationalId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Certifications] ADD  CONSTRAINT [DF_CreationDate]  DEFAULT (getdate()) FOR [CreateDate]
+GO
+ALTER TABLE [dbo].[Certifications] ADD  CONSTRAINT [DF_IsActiveDefualt]  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[STUDENTS] ADD  DEFAULT (getdate()) FOR [CreateDate]
+GO
+ALTER TABLE [dbo].[STUDENTS] ADD  DEFAULT ((1)) FOR [IsActive]
+GO
+ALTER TABLE [dbo].[Certifications]  WITH CHECK ADD  CONSTRAINT [CH_CourseName] CHECK  (([CourseName] like '___%'))
+GO
+ALTER TABLE [dbo].[Certifications] CHECK CONSTRAINT [CH_CourseName]
+GO
+ALTER TABLE [dbo].[Certifications]  WITH CHECK ADD  CONSTRAINT [CH_MarkValidation] CHECK  (([MARK]>(0) AND [MaRK]<(100)))
+GO
+ALTER TABLE [dbo].[Certifications] CHECK CONSTRAINT [CH_MarkValidation]
+GO
+ALTER TABLE [dbo].[Certifications]  WITH CHECK ADD  CONSTRAINT [CH_Orginzation] CHECK  ((len([Orginzation])>=(3)))
+GO
+ALTER TABLE [dbo].[Certifications] CHECK CONSTRAINT [CH_Orginzation]
+GO
+ALTER TABLE [dbo].[Certifications]  WITH CHECK ADD  CONSTRAINT [CH_Title] CHECK  ((len([Title])>=(3)))
+GO
+ALTER TABLE [dbo].[Certifications] CHECK CONSTRAINT [CH_Title]
+GO
+ALTER TABLE [dbo].[STUDENTS]  WITH CHECK ADD CHECK  (([Email] like '_%@__%.__%'))
+GO
+ALTER TABLE [dbo].[STUDENTS]  WITH CHECK ADD CHECK  (([NationalId] like '__________'))
+GO
+ALTER TABLE [dbo].[STUDENTS]  WITH CHECK ADD  CONSTRAINT [CK__STUDENTS__Passwo__4F7CD00D] CHECK  (([Password] like '______%'))
+GO
+ALTER TABLE [dbo].[STUDENTS] CHECK CONSTRAINT [CK__STUDENTS__Passwo__4F7CD00D]
+GO
+ALTER TABLE [dbo].[STUDENTS]  WITH CHECK ADD CHECK  (([Phone] like '07________'))
+GO
+USE [master]
+GO
+ALTER DATABASE [SDB] SET  READ_WRITE 
+GO

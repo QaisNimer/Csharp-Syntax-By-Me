@@ -1,0 +1,40 @@
+-- Retereve all rows and columns in the selected table /
+SELECT * FROM Admins
+SELECT * FROM Callers
+SELECT * FROM calls
+SELECT * FROM CountryCodes
+SELECT * FROM LookupItems
+SELECT * FROM LookupTypes
+
+-- Reterive all row with cusom static column (same cloumn in table)
+SELECT ID,Name,Email FROM Admins
+select Id , Firstname, MiddleName , LastName , PhoneNumber , Email , Creationdate from Callers
+
+-- Reterive all row with custom column name (alis)
+
+select Id , Firstname as FN, MiddleName as MN, LastName as LN, PhoneNumber as Phone, Email as Em, Creationdate as JoinDate from Callers
+
+select C.Id , C.Title, C.Description , C.Duration , c.CallerId  from Calls  as C
+
+-- Reterive all row with custom column values
+
+select Name,Email,GetDate() as [date] from Admins  -- inject dynamic value
+
+select Name,Email,'Act as Admin' AS  [role] from Admins -- inject static value
+
+select C.Id , (c.FirstName + '    ' + c.LastName ) as FullName,c.Email,C.PhoneNumber from callers as C -- inject computed column 
+
+select CONCAT(cc.Code,' - ',cc.Sym) from CountryCodes as cc -- inject using concat
+
+select c.Sym+' - '+CAST( c.Code as VARCHAR(MAX)) as Code from CountryCodes as c
+
+-- Retervie Stastics a cross all rows in db -- AggreaTION	 
+select count(*) as callCount from calls -- count  how many rows in the selected table 
+select max(c.Duration) from Calls as c -- max    return  the max value in specific column 
+select min(c.Duration) from Calls as c -- min    return the min value in specific column 
+select sum(cast(REPLACE(c.Duration,' mins','')as int) ) from Calls as c -- sum    how much the addition of the values in specifc cloumn
+select avg(cast(REPLACE(c.Duration,' mins','')as int) ) from Calls as c -- Avg    return the avg value in specific column 
+
+
+
+

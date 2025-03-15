@@ -1,0 +1,66 @@
+1- Define Scope  (Library Management System)
+
+2- Mandatory Object (Author - Book - Admin)
+
+3- Software Type (Customize) - (Requirement Techniques)
+
+4- Summarizing System Objects (Abstract action)
+   
+(id,createby,updateby,isActive,updatedate,creationdate)
+
+   A- Admin (fullname , email , password)
+   B- Author (fullname , email , password , bio,image,nationlity,category)
+   C-Book(title,descr,serial,category,coverImage,downloadlink,language,published date)
+   D- Blog (title,description,image?,video?)
+   E- Client (fullname , email , password , bio,image,nationlity,category,phone)
+   F- Rate (Message , rateAmount)
+
+5- Generlization and Specilization (Restructuring)
+
+  --> Admin , Client , Author ----> Person 
+  --> Person , Book , Blog , Rate ---> ParentEntity 
+
+6- Define Relationships 
+
+  1)Inheritance 
+
+   A - Combine every thing in one table (Prson)
+   B - Create child and add the shared element in each child indvually
+   C - Create Parent and Child and build relationship between them   
+    
+  2)Composition 
+
+    Person ( M-M )Book   (1-M) Blog (M-M) Rate
+    Book 
+    Blog 
+    Rate  (weak entity)
+
+    Single dependent -----> weak entity
+    multi dependent  -----> Relationship
+
+  3)Association
+
+
+============================ Reult 1 ==============================
+System Object and Relationships 
+===================================================================
+7- Implement ER Digram 
+
+    Person (1-M) Blog 
+    Book 
+    Blog 
+    Rate   (weak entity)
+
+8- Implement Data base (Tables and contsraints)
+
+   A- Denormilization (Actors , Object)
+      /Normlization (Actors , Object , Lookups (nationlity, category, language))
+
+   1- id , Name 
+
+9- Fill Testing Data at leat 5 row in each table 
+
+10- Implement The Required Schema Object (SP / Funcations / View / Trigger / Job )
+
+
+11- Test the required bussniess case / requirement  

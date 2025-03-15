@@ -1,0 +1,6 @@
+1- Generate Data base Script (schma , Data , scheam and data)
+
+2- Backup File (.bak) ---> scheam and data (no sql )
+
+3- Export Data Tier Application 
+

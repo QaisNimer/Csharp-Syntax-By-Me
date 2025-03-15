@@ -1,0 +1,10 @@
+=====> on Table Creation 
+Primary Key 
+Not Null 
+Unique 
+
+
+====> on Alter Table 
+Default 
+Check 
+ForigenKey

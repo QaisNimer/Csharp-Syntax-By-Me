@@ -1,0 +1,5 @@
+Query 
+
+1- Get Student Name (First and Last) , Email , Password as set of * 
+
+Jasser Alshaer joshaer17@gmail.com  *********

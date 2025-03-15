@@ -1,0 +1,43 @@
+-- Retereve custom rows and columns in the selected table 
+SELECT * FROM Admins
+SELECT * FROM Callers
+SELECT * FROM calls
+SELECT * FROM CountryCodes
+SELECT * FROM LookupItems
+SELECT * FROM LookupTypes
+
+-- LINQ (Fillteration , Sorting/Ordering , Selection ) - JOIN 
+-- 1- WHERE STATEMENT
+SELECT * FROM CALLERS WHERE PHONENUMBER LIKE '78%' -- (CONDITION) COLUMNS AND VALUE COMPARISION / LOGICAL OPERATOR
+SELECT * FROM CALLERS WHERE PHONENUMBER LIKE '78%'  AND LASTNAME LIKE 'A%'
+
+-- 2- In Statement --> Suggest Multiple values for condition 
+SELECT * FROM CALLERS WHERE FIRSTNAME In ('Omar','Jasser','Nada','Khaled')
+
+-- 3 - Between ---> search for numeric values in specifc interval (start-end) interval boundaries are included
+SELECT * FROM CALLS WHERE cast(REPLACE(Duration,' mins','')as int) Between 40 and 50
+
+-- 4 Is Null  , Is Not Null
+select * from Callers where CountryCodeId is null
+select * from Callers where CountryCodeId is not null
+
+-- 5- Exisit ----> Sub Query 
+
+-- sub query ---> find / fill column in query using another query 
+-- return all caller with call amount 
+
+select c.Id,(c.FirstName + '    ' + c.LastName ) as FullName,c.Email,C.PhoneNumber
+,(select count(*) from calls where CallerId = c.Id) as [Call Amount]
+from callers as c
+
+-- query call title , description , duration , Full Name Caller using sub query
+select c.id,(select (ca.FirstName + '    ' + ca.LastName )  from callers  as ca
+where id = CallerId) as FullName,c.title,c.description ,c.duration from calls  as c
+
+
+-- exisit (execute sub query if it have adata (at least 1 row) ) then complete the query
+
+-- return all caller info while this caller has at least one purches
+
+select * from callers  as ca where exists
+(select * from calls as c  where c.IsPurches = 1 and c.CallerId = ca.Id)

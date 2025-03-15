@@ -1,0 +1,64 @@
+-- on Create 
+CREATE TABLE STUDENTS(
+Id INT PRIMARY KEY IDENTITY(1,1),--(seed,increment) ,
+FirstName varchar(100) not null,-- character only 
+LastName varchar(100) not null,-- character only 
+Email varchar(100) not null unique CHECK (Email like '_%@__%.__%'),--
+Phone varchar(10) not null unique CHECK (Phone like '07________'),-- check length  = 10 , must be digits , no spaces , start with 07
+NationalId varchar(10)not null unique CHECK (NationalId like '__________'), -- check length  = 10 , must be digits , no spaces 
+[Password] varchar(16) not null CHECK ([Password] like '______'),-- min length 6 max 16 1 digit 1 symbol 1charcter
+CreateDate DateTime Default GetDate(),
+UpdateDate DateTime , 
+CreatedBy  varchar(max),
+UpdateBy   varchar(max),
+IsActive   Bit Default 1
+)
+
+
+
+CREATE TABLE Certifications(
+CourseName varchar(max),-- must be at least with 3 digits
+Title varchar(max),-- must be at least with 3 digits
+Orginzation varchar(max), -- must be at least with 3 digits  
+IssuedDate Datetime,
+Mark float,-- must be less than 100 and bigger than zero 
+CertificationSerial varchar(100) , -- WEB-APPTR-ACHIV-2025-000
+CreateDate DateTime,
+UpdateDate DateTime , 
+CreatedBy  varchar(max),
+UpdateBy   varchar(max),
+IsActive   Bit
+)
+
+-- on Alter Approach 
+
+-- Primary 
+ALTER TABLE Certifications ADD Id int primary key IDENTITY (1,1) 
+
+ALTER TABLE Certifications ALTER COLUMN Id int NOT NULL
+ALTER TABLE Certifications ADD CONSTRAINT PK_ID PRIMARY KEY (Id)
+
+-- not null
+ALTER TABLE Certifications ALTER COLUMN  CourseName varchar(max) NOT NULL
+ALTER TABLE Certifications ALTER COLUMN  Title varchar(max) NOT NULL
+ALTER TABLE Certifications ALTER COLUMN  Orginzation varchar(max) NOT NULL
+ALTER TABLE Certifications ALTER COLUMN  IssuedDate Datetime NOT NULL
+ALTER TABLE Certifications ALTER COLUMN  Mark float NOT NULL
+-- change data type 
+ALTER TABLE Certifications ALTER COLUMN  CertificationSerial varchar(100)
+--unique 
+ALTER TABLE Certifications ADD CONSTRAINT UK_CERSERIAL UNIQUE (CertificationSerial)
+
+-- Default 
+ALTER TABLE Certifications ADD CONSTRAINT  DF_IsActiveDefualt DEFAULT 1 FOR IsActive
+ALTER TABLE Certifications ADD CONSTRAINT  DF_CreationDate   DEFAULT GETDATE() FOR CreateDate
+
+-- Check 
+ALTER TABLE Certifications ADD CONSTRAINT  CH_MarkValidation CHECK (MARK > 0 AND MaRK <100)
+
+ALTER TABLE Certifications ADD CONSTRAINT  CH_CourseName CHECK (CourseName LIKE '___%')
+
+ALTER TABLE Certifications ADD CONSTRAINT  CH_Title CHECK (LEN(Title)>=3)
+
+ALTER TABLE Certifications ADD CONSTRAINT  CH_Orginzation  CHECK (LEN(Orginzation )>=3)
+

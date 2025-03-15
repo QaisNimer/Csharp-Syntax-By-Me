@@ -1,0 +1,6 @@
+Check ( condition / expression ) (Boolean --> true 
+data is compatable with my rule and allowed to be inserted )
+
+false --> data is not compatable with my rules and not allowed to be instred 
+
+Insert / Update 

@@ -1,0 +1,24 @@
+-- union , intersect , except  (sql operator)
+
+-- extract result from the same executed query (compairing between two query result )
+
+-- result set A - B -->  mostly the same result set structure 
+-- union (combine all result in two queries with out any dublication ) combine result with out dublication 
+select firstname , lastname  from Callers
+union
+select firstname , lastname  from Callers where Id > 5
+
+-- union (combine all result in two queries with dublication ) 
+select firstname , lastname  from Callers
+union all
+select firstname , lastname  from Callers where Id > 5
+
+-- intersect (find the share values / result from two diffrent query )
+select id,firstname , lastname  from Callers where Id > 8
+intersect
+select id,firstname , lastname  from Callers where Id > 5
+
+-- except (find the differance remove any existing matching in result set b from the first result set)
+select id,firstname , lastname  from Callers where Id > 3
+except
+select id,firstname , lastname  from Callers where Id > 5

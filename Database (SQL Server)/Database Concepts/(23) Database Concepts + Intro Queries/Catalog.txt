@@ -1,0 +1,23 @@
+1- Define Scope   
+
+
+2-Define Mandory Objects 
+
+
+3-Requirement Gathering 
+
+
+
+4- Abstraction     (Entity Relationship Digrams )
+
+    - Summries Object ----> Table
+    - Specify Property (Name , DataType , Constrints )
+    - Define Relationshipls 
+
+5- Real Implementaion 
+
+   - Create Database 
+   - Creaate Required Table Depends on the current cycle / phase 
+   - Data (May Instreated)
+   - Opertions (SP , Functions , Trigger , Jobs , View , CustomeQuery)
+

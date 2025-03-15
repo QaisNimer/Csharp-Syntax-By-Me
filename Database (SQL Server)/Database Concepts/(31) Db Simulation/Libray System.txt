@@ -1,0 +1,42 @@
+Libray System 
+
+Admins
+Authors
+Book  (M-M) author has many book and book has many author 
+Blog  (1 author has many blogs -M) 
+Clients 
+Rate Book (1 - M ) message , rate of 10  (1-10)
+
+0- Admin Account Should be available before anything 
+1- Admin Will log in to the system 
+2- Admin should be able to add author by 
+   (FullName,Email,Password,Nationality,Image,Category,Bio)
+3- Admin should be able Explore Authors by (Name , Email , Image , Nationalty)
+4- Admin should be able deactived / activate author account
+5- Admin should be able edit (Email , Category , Bio , FullName)
+6- Admin should be able explore books by (title , category , published date , rate , authors )
+7- Admin should be able explore book details (title , category , authors , comments , rate , publish date , link )
+8- Admin should be able approve / disapprove book publish 
+9- Admin should be able explore blog 
+10- Admin should be able explore blog details 
+11- Admin should be able approve / disapprove blog publish 
+12- Admin should be able explore clients 
+13- Admin should be able deactived / activate client account
+14- Author Should be able to login 
+15- Author Should be able to mange book
+16- Author Should be able to mange blog
+17- Author Should be able to explore rating 
+18- Author Should be able to logout 
+19- Client Should be able to login 
+20- Client should be able to explore blog 
+21- Client should be able to explore book 
+22- Client should be able to get book details 
+23- Client should be able to download book 
+24- Client should be able to rate book 
+25- Client Should be able to logout 
+
+
+
+
+
+ 
