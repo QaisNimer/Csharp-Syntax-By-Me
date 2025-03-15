@@ -1,0 +1,37 @@
+abstract method ---> concept to identify the method that dose not have any implement  (method with out scope)
+
+output Name input   ----> Provide Blue Print about the Targeted Operation
+
+- abstract method should be available on abstract class 
+- abstract method should be availeble on interface 
+- abstract method must be override 
+
+abstract classs vs Interface 
+
+1- abstract class : specail type of class determine by keyword *(abstract)  when the class markerd as abstract
+   
+   - Prvent Intilizaed / Create Object From This Class 
+   - Able To Holde Abstract Method & Methods 
+   - To Define Abstract Method you should use abstract keyword with the method declration
+   - abstract method must be not private 
+
+
+2- Interface : special type of class defined by (interface) keyword 
+
+   - Prvent Intilizaed / Create Object From This Interface
+   - the method on interface abstract by default 
+   - able to add any type of method inside interface
+   - Able To Holde Abstract Method With out abstract keyword To Prodived Blue Print of the Targeted Implement 
+   - Support Concept (Multiple Inheritance ) ---> Allow (Class / Object) To Implement Behivor From Differen Source (Contract)
+   - Not allowed to store filed  
+   - Interface Member (Methods,Proprty,Comment )
+   - the default access modifer is (public) beacause this method desined to be implement by another classes
+
+3- access modifier : keywords to manage the class / method / filed / proprty access through the 
+inter soultion 
+
+   a- private : this part only accessable inside the defined file (interface/class) --> default for class member (filed/property/method)
+   b- internal : this part only accessaable inside the defined namespace   ---> default for namespace member 
+   c- public : this part accessable acroos multiple namespace in the solution while this namespace have dependancies betwwen each other
+   d- protected :  
+
