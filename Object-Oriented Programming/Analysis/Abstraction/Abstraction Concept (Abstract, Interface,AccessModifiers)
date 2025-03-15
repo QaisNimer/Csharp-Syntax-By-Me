@@ -33,5 +33,18 @@ inter soultion
    a- private : this part only accessable inside the defined file (interface/class) --> default for class member (filed/property/method)
    b- internal : this part only accessaable inside the defined namespace   ---> default for namespace member 
    c- public : this part accessable acroos multiple namespace in the solution while this namespace have dependancies betwwen each other
-   d- protected :  
+   d- protected :  later on....
+/*_______________________________________________________________NOTES________________________________________________________________*/
+
+- method should be with access modifier eqvluante to the class access modifre or less that it 
+
+- separate the abstraction for method and propety 
+
+- abstraction for Opertaiotn should be in intrerface 
+
+- abstraction for Propert Should be in class 
+
+ 
+
+
 
