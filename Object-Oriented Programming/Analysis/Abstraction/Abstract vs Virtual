@@ -1,0 +1,13 @@
+abstract
+
+1- defined abstract class 
+   - pervent from intiated 
+   - could contain / hold abstrat method 
+2- define abstract method 
+   - define method with out implementation (interfaace / abstract class)
+   - must be override in child class 
+
+virtual
+
+ - allow you to implement method 
+ - may be override  
