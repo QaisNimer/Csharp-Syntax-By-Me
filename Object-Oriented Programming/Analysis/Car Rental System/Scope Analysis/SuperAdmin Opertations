@@ -1,0 +1,52 @@
+-Super Admin
+ -Login (by phone number or email--> should be unique / password with at least 8 chars and 1 letter, 1 symbol, 1 digit)
+After each successful login OTP will be sent to client with 6 digits length
+Operations based on priority:
+1.	CRUD operations
+2.	Import from excel
+3.	Export to excel
+4.	Aggregation operations
+5.	Charts
+
+**Login Techniques**
+1.	image password
+2.	captcha
+3.	master password
+4.	OTP / two factor authentication
+5.	via social media
+Permission management: (for each operation there is a permission)
+AKA
+
+Explore Permission: List all available permission in the system by displaying (id, name, 
+nameAR, descriptionAR)
+super admin should be able to: 
+-get all
+-get by ID
+
+Role Management
+1.	create new role (name, nameAR, descriptionAR, listOfPermission) 
+2.	update existing role
+3.	list all role
+4.	manage role activation (soft-Delete aka disabled)
+
+Office Management:
+Register new office and admin (for each office there is an admin)
+-Create office with admin by (TitleEn-req, TitleAR, BioAr-req, BioEn-req, Image/Logo, List of Location, Contact info, Conditions, WorkHrs -startAt, endAt-, EstablishmentDate, DocumentForOffice, AdminName, AdminEmail, AdminPhone,AdminPassword)
+Each location has: Branch Name, Country, City, Region/Area, Lat, Long, 
+Each Contact information has: (phone, phone) , social media links(WhatsApp, Insta, Face, Email) 
+List All new Office join Requests: (logo, name, AdminPhone, Admin, Email)
+-Get new Office details:
+-Approve/Reject (send email with response and description and link -redirect to new page approve=> login / reject=>request page)
+
+List all current Offices: (logo, name, branches, Cars, Contract, revenue, status, rating)
+Get Current office details 
+Manage Activation
+Send Alert
+Send Reset Password Link (for extra security)
+Manage Country/ City, Region
+Export Reports
+Import/Export Excel
+Aggregation
+Charts
+ 
+
